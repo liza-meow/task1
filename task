@@ -1,0 +1,19 @@
+import math
+
+class ShapeCalculator:
+    def __init__(self):
+        pass
+    
+    def calculate_circle_area(self, radius):
+        return math.pi * radius**2
+    
+    def calculate_triangle_area(self, side1, side2, side3):
+        s = (side1 + side2 + side3) / 2
+        return math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
+
+# Пример использования:
+calculator = ShapeCalculator()
+circle_area = calculator.calculate_circle_area(5)
+triangle_area = calculator.calculate_triangle_area(3, 4, 5)
+print("Площадь круга:", circle_area)
+print("Площадь треугольника:", triangle_area)
